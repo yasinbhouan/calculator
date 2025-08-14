@@ -1,44 +1,58 @@
 *{
   margin: 0;
   padding: 0;
-  box-shadow: border-box;
+  box-sizing: border-box;
+}
+body{
+  background-color: #000000;
 }
 .calc{
-  min-width: 300px;
-  max-width: 420px;
+  width: 392px;
   text-align: center;
-  margin: 0 auto;
+  margin: 40px auto;
+  padding: 6px;
+  outline: 3px solid rgba(255, 255, 255, 0.5 );
   font-size: 0;
-  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 50px 10px rgba(255, 255, 255, 0.5);
   transition: 0.2s;
   background: #000000;
+  border-radius: 20px;
+  position: relative;
 }
 .calc:hover{
-  box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 100px 20px rgba(255, 255, 255, 0.6);
 }
-.result{
+.camera{
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 12px;
+  background: #000000;
+  border-radius: 50%;
+}
+.result_display{
   width: 100%;
   font-size: 50px;
-  font-weight: bold;
   text-align: right;
   padding: 80px 0;
   letter-spacing: 2px;
-  background: rgba(120, 120, 120, 0.5);
-  border-radius: 0 0 30px 30px;
+  background: rgba(150, 149, 149, 0.5);
+  border-radius: 10px 10px 30px 30px;
   border: none;
   outline: none;
-  color: rgba(255, 255, 255, 1)
-  
+  color: rgba(255, 255, 255, 1);
 }
-.calc__input{ 
-  padding: 20px 0;
+.calc__input{
+  padding: 30px 0;
 }
 .calc__row{
   padding: 5px 0;
 }
 .btn{
-  width: 24%;
-  min-height: 99px;
+  width: 85px;
+  min-height: 90px;
   background: rgba(75, 75, 75, 0.5);
   color: rgba(218, 218, 255, 1);
   font-weight: normal;
@@ -46,28 +60,31 @@
   border: none;
   border-radius: 50%;
   transition: 0.1s;
-  margin: 0.5%;
+  margin: 5px;
   font-family: Arial, Helvetica, sans-serif;
 }
 .btn:active{
   border-radius: 35%;
   background: rgba(130, 130, 130, .5);
 }
-.b{
-  background: rgba(0, 159, 255, 0.5);
-}
-.b:active{
-  background: rgba(128, 207, 255, 0.5);
-}
-.c{
-  background: rgba(25, 86, 255, 0.5);
-}
-.c:active{
-  background: rgba(137, 170, 255, 0.5)
-}
-.ac{
+.reset{
   background: rgba(0,180,0,0.5);
 }
-.ac:active{
+.reset:active{
   background: rgba(126, 255, 126, 0.5);
+}
+.oparetor{
+  background: rgba(0, 159, 255, 0.5);
+}
+.oparetor:active{
+  background: rgba(128, 207, 255, 0.5);
+}
+.equal{
+  background: rgba(25, 86, 255, 0.5);
+}
+.equal:active{
+  background: rgba(137, 170, 255, 0.5)
+}
+.small{
+  font-size: 35px;
 }

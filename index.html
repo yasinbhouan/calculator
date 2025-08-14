@@ -1,70 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- meta -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  
-  <!--style-->
-  <link rel="stylesheet" href="style.css">
-  
+
   <!--font awesome-->
   <script src="https://kit.fontawesome.com/994336f2c8.js" crossorigin="anonymous"></script>
-  
+
   <!--favicon-->
   <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
-  
+
+   <!--style-->
+  <link rel="stylesheet" href="style.css">
+
   <title>Calculator</title>
 </head>
 <body>
   <section>
     <div class="calc">
-      
-      <div class="calc__output">
-        <input class="result" type="number" name="result" id="result">
+        <div class="camera"></div>
+      <div class="calc__result">
+        <input class="result_display" name="resultDisplay" id="resultDisplay" disabled>
       </div>
-      
       <div class="calc__input">
-        
         <div class="calc__row">
-          <button class="btn ac" type="submit">AC</button>
-          <button class="btn b"  type="submit">( )</button>
-          <button class="btn b"  type="submit">%</button>
-          <button class="btn b" type="submit">×</button>
+          <button class="btn reset small" id="clear" type="submit">AC</button>
+          <button class="btn oparetor small" id="bracket" type="submit">( )</button>
+          <button class="btn oparetor small" id="percentage" type="submit">%</button>
+          <button class="btn oparetor small" id="miltiplication" type="submit">×</button>
         </div>
-        
         <div class="calc__row">
-          <button class="btn" type="submit">7</button>
-          <button class="btn"  type="submit">8</button>
-          <button class="btn"  type="submit">9</button>
-          <button class="btn b" type="submit">÷</button>
+          <button class="btn" id="seven" type="submit">7</button>
+          <button class="btn" id="eight" type="submit">8</button>
+          <button class="btn" id="nine" type="submit">9</button>
+          <button class="btn oparetor" id="divide" type="submit">÷</button>
         </div>
-        
         <div class="calc__row">
-          <button class="btn" type="submit">4</button>
-          <button class="btn"  type="submit">5</button>
-          <button class="btn"  type="submit">6</button>
-          <button class="btn b" type="submit">-</button>
+          <button class="btn" id="four" type="submit">4</button>
+          <button class="btn" id="five" type="submit">5</button>
+          <button class="btn" id="six" type="submit">6</button>
+          <button class="btn oparetor" id="substraction" type="submit">-</button>
         </div>
-        
         <div class="calc__row">
-          <button class="btn" type="submit">1</button>
-          <button class="btn"  type="submit">2</button>
-          <button class="btn"  type="submit">3</button>
-          <button class="btn b" type="submit">+</button>
+          <button class="btn" id="one" type="submit">1</button>
+          <button class="btn" id="two" type="submit">2</button>
+          <button class="btn" id="three" type="submit">3</button>
+          <button class="btn oparetor" id="addition" type="submit">+</button>
         </div>
-        
         <div class="calc__row">
-          <button class="btn" type="submit">0</button>
-          <button class="btn"  type="submit">.</button>
-          <button class="btn"  type="submit"><i class="fa-solid fa-delete-left"></i></button>
-          <button class="btn c" type="submit">=</button>
+          <button class="btn" id="zero" type="submit">0</button>
+          <button class="btn" id="point" type="submit">.</button>
+          <button class="btn small" id="delete" type="submit"><i class="fa-solid fa-delete-left"></i></button>
+          <button class="btn equal" id="equal" type="submit">=</button>
         </div>
-        
       </div>
     </div>
-    
   </section>
-  
 </body>
 </html>
