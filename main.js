@@ -6,12 +6,6 @@ function updateDisplay() {
     display.value = calculation;
 }
 
-// AC button
-document.getElementById("clear").onclick = () => {
-    calculation = '';
-    updateDisplay();
-};
-
 // Number and operator buttons
 document.querySelectorAll('.calc__row .btn').forEach(button => {
     if (
@@ -25,6 +19,12 @@ document.querySelectorAll('.calc__row .btn').forEach(button => {
         };
     }
 });
+
+// AC button
+document.getElementById("clear").onclick = () => {
+    calculation = '';
+    updateDisplay();
+};
 
 // Delete button
 document.getElementById("delete").onclick = () => {
@@ -41,7 +41,7 @@ document.getElementById("equal").onclick = () => {
                 .replace(/÷/g, "/")
         ).toString();
     } catch {
-        calculation = "Fucked Up";
+        calculation = "Syntex Error";
     }
     updateDisplay();
 };
@@ -51,7 +51,7 @@ document.getElementById("percentage").onclick = () => {
     try {
         calculation = (eval(calculation) / 100).toString();
     } catch {
-        calculation = "Error";
+        calculation = "Syntex Error";
     }
     updateDisplay();
 };
